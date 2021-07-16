@@ -1,14 +1,74 @@
 package com.javaex.basics;
 
 public class Types {
-
+	static final int SPEED_LIMIT = 120;
 	public static void main(String[] args) {
 //		varEx();
 //		intergerEx();
 //		floatDoubleEx();
 //		booleanEx();
-		charEx();
+//		charEx();
+//		constantEx();
+//		promotionEx();
+		castingEx();
 	}
+	
+	// 명시적 형변환(casting)
+	private static void castingEx() {
+		// 표현 범위가 넓은 자료형 -> 좁은 자료형으로 변환
+		// 강제로 타입 변환을 수행, 자료의 유실이 발생할수도
+		float f = 1234567890.123456789F;
+		System.out.println(f); // 4byte 실수형
+		
+		long l = (long)f; // 8byte 정수형 -> 소수점 자료의 유실 발생
+		System.out.println(l);
+		
+		int i = (int)l; // 4byte 정수형
+		System.out.println(Integer.toBinaryString(i));
+		
+		short s = (short)i;
+		System.out.println(Integer.toBinaryString(s));
+		
+	}
+	
+	// 암묵적 형변환(promotion)
+	private static void promotionEx() {
+		// byte < short < int < long | float < double
+		// 표현 범위 좁은 자료형 -> 넓은 자료형으로
+		// 자동 변환 수행
+		byte b = 25; // 1byte 정수형
+		System.out.println(b);
+		
+		short s = b; // 2byte 정수형
+		System.out.println(s);
+		
+		int i = s; // 4byte 정수형
+		System.out.println(i);
+		
+		long l = i; // 8byte 정수형
+		System.out.println(l);
+		
+		float f = l; // 4byte 실수형
+		// 바이트 수는 적지만, 표현 범위가 더 넓다
+		System.out.println(f);
+		
+		double d = f;
+		System.out.println(d);
+	}
+	
+	// 상수
+	private static void constantEx() {
+		int SPEED_LIMIT = 120;
+		
+		System.out.println("제한속도:" + SPEED_LIMIT);
+		System.out.println("현재 도로의 제한 속도는 "+SPEED_LIMIT+"입니다.");
+		
+//		SPEED_LIMIT = 160; // 변경 시도 불가(final)
+		System.out.println("제한속도:" + SPEED_LIMIT);
+		System.out.println("현재 도로의 제한 속도는 "+SPEED_LIMIT+"입니다.");
+		
+	}
+	
 	// 문자형 데이터 타입
 	private static void charEx() {
 		char ch1 ='A';
