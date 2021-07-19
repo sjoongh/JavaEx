@@ -4,8 +4,34 @@ public class OperatorEx {
 
 	public static void main(String[] args) {
 //		arithOperEx();
-		logicOperEx();
+//		logicOperEx();
+		bitOperEx();
 	}
+	
+	// 비트 연산자
+	private static void bitOperEx() {
+		// 하드웨어 제어, 이미지 처리 등
+		// 미세하게 비트 단위 데이터 제어에 활용
+		byte b1 = 0b1101;
+		byte b2 = 0b0111;
+		
+		System.out.println("b1: " + Integer.toBinaryString(b1));
+		System.out.println("b2: " + Integer.toBinaryString(b2));
+		
+		int result = b1 & b2;// 비트 논리곱
+		System.out.println("b1 & b2: " + Integer.toBinaryString(result));
+		
+		result = b1 | b2; // 비트 논리합
+		System.out.println("b1 | b2: "+Integer.toBinaryString(result));
+		
+		result = ~b1; // 비트 논리 부정
+		System.out.println("~b1: "+Integer.toBinaryString(result));
+		
+		result = b1 ^ b2; // 베타적 논리합
+		System.out.println("b1 ^ b2: "+Integer.toBinaryString(result));
+		
+	}
+	
 	
 	// 비교 연산과 논리 연산
 	private static void logicOperEx() {
@@ -47,6 +73,7 @@ public class OperatorEx {
 		System.out.println("num가 0초과, 10미만 이외의 값인가?" + rNot);
 		
 	}
+	
 
 	// 산술 연산
 	private static void arithOperEx() {
@@ -84,7 +111,5 @@ public class OperatorEx {
 		System.out.println(Double.isInfinite(4.0 / 0));
 		System.out.println(Double.isNaN(0.0 / 0.0));
 		System.out.println("End of Code");
-		
-		  
 	}
 }
