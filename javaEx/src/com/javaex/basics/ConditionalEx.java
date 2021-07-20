@@ -8,18 +8,68 @@ public class ConditionalEx {
 //		ifElsePractice();
 //		switchEx();
 //		switchEx2();
-		conditionalPractice01();
-		conditionalPractice02();
+//		conditionalPractice01();
+//		conditionalPractice02();
+		switchEx3("TUESDAY");
+	}
+	
+	private static void switchEx3(String day) {
+		// day가 SUNDAY -> 휴식
+		// MONDAY ~ THURSDAY -> 열공
+		// FRIDAY -> 열공 후 불금
+		// SATURDAY -> 주말
+		// 그 이외 -> ?
+		// TODO: 이 코드는 나중에 enum 타입으로 개선해 볼 예정
+		String act;
+		
+		switch(day) {
+		case "SUNDAY":
+			act = "휴식";
+			break;
+		case "MONDAY":
+		case "TUESDAY":
+		case "WEDNESDAY":
+		case "THURSDAY":
+			act = "열공";
+			break;
+		case "FRIDAY":
+			act = "열공 후 불금";
+			break;
+		case "SATURDAY":
+			act = "주말";
+			break;
+		default: act = "?";
+		}
+		System.out.println(day +"에는 "+ act);
 	}
 	
 	private static void conditionalPractice01() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("정수를 입력하세요");
+		int num = sc.nextInt();
 		
+		if (num % 3 == 0)
+			System.out.println("3의 배수 입니다.");
+		else
+			System.out.println("3의 배수가 아닙니다.");
 	}
 	
 	private static void conditionalPractice02() {
 		Scanner sc = new Scanner(System.in);
 		
+		int num = sc.nextInt();
+		
+		System.out.print("정수를 입력하세요 : ");
+		if (num >= 90)
+			System.out.println("A등급");
+		else if (num >= 80 && num < 90)
+			System.out.println("B등급");
+		else if (num >= 70 && num < 80)
+			System.out.println("C등급");
+		else if (num >= 60 && num < 70)
+			System.out.println("D등급");
+		else
+			System.out.println("F등급");
 	}
 	
 	private static void switchEx2() {
