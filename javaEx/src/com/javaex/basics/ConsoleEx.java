@@ -19,6 +19,17 @@ public class ConsoleEx {
 		System.out.print("나이:");
 		String age = scanner.next();
 		System.out.println("당신의 이름은 "+name+", 나이는 "+age+"입니다.");
+		
+		scanner.close();
+	
+//		String input = in.nextLine().toLowerCase();
+//
+//			// 숫자가 아니면 빈칸으로
+//	        input = input.replaceAll("[^0-9]", "");
+//
+//			// 인트로 변환
+//	        int result = Integer.parseInt(input);
+//	        System.out.println(result);
 	}
 	
 	private static void consoleInputEx() {
