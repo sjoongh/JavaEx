@@ -36,6 +36,7 @@ public class WrapperEx {
 		System.out.println("i3 == i4 ? "+(i3 == i4)); // 다른 객체임을 유의
 		System.out.println("값의 비교:"+i3.equals(i4));
 		System.out.println("언박싱 비교:"+(i3.intValue() == i4.intValue()));
+		
 	}
 
 }
