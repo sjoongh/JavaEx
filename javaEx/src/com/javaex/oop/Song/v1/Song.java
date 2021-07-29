@@ -58,6 +58,6 @@ public class Song {
 		this.track = track;
 	}
 	public void showInfo() {
-		System.out.println(artist);
+		System.out.println();
 	}
 }

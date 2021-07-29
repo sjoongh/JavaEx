@@ -6,7 +6,6 @@ public class ThrowExcept {
 	public void executeException() throws IOException {
 		System.out.println("강제 예외 발생");
 		throw new IOException("강제 예외"); // Checked Exception -> 반드시 예외 처리
-
 	}
 	
 	public void executeRuntimeException() {

@@ -10,7 +10,18 @@ public class LoopEx {
 //		forGugu();
 //		continueEx();
 //		test1();
-		test2();
+//		test2();
+		breakEx();
+	}
+	
+	private static void breakEx() {
+		int num = 1;
+		
+		while(true) {
+			if (num % 6 == 0 && num % 14 == 0)
+				break;
+			num++;
+		}
 	}
 	
 	private static void test2() {
