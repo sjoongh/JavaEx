@@ -29,3 +29,4 @@ public class LangClassTest {
 		System.out.println("c1.equals(c2) ? "+c1.equals(c2));
 	}
 }
+

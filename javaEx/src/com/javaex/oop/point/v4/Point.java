@@ -31,12 +31,13 @@ public class Point {
 	// 메서드 오버로딩
 	// 매개 변수의 타입, 갯수, 순서가 다르면 같은 이름의 메서드가 여러개
 	// 존재할 수 있다.
+	// return 메소드는 자신이 일을 처리하지 않고 반환
+	// void메소드는 자신이 일을 시작하고 마무리함
 	public void draw() {
 		System.out.printf(
 				"점[x=%d, y=%d]을 그렸습니다.%n",
 				x, y);
 	}
-	
 	public void draw(boolean bShow) {
 		String message = String.format("점[x=%d, y=%d]을", x, y);
 //		if (bShow) { // == true
