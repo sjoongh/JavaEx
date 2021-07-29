@@ -6,17 +6,17 @@ public class test {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-//		int A = sc.nextInt();
-//		int B = sc.nextInt();
-//		int C = sc.nextInt();
-//		int X = 1;
-//		
-//		if (B >= C) {
-//			System.out.println("-1");
-//		}
-//		X = A / (C - B) + 1;
-//		System.out.println(X);
-//		
+		int A = sc.nextInt();
+		int B = sc.nextInt();
+		int C = sc.nextInt();
+		int X = 1;
+		
+		if (B >= C) {
+			System.out.println("-1");
+		}
+		X = A / (C - B) + 1;
+		System.out.println(X);
+		
 		int N = sc.nextInt();
 		int M = sc.nextInt();
 		

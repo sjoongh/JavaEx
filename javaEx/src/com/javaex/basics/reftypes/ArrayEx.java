@@ -60,7 +60,6 @@ public class ArrayEx {
 			System.out.print(i + '\t');
 			}
 		System.out.println();
-// 왜 주석해도 두개 같이 안나옴?????? -> 내일 해결
 	}
 	
 	private static void multiDimArray() {

@@ -1,6 +1,5 @@
 package com.javaex.basics.reftypes;
 import java.util.*;
-import java.io.*;
 import java.util.Random; // 기본적으로 main문에는 있지만 public static 생성시에는 
 // import 를 해줘야 동작함
 

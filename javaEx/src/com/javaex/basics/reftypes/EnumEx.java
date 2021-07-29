@@ -9,6 +9,8 @@ public class EnumEx {
 	}
 	
 	public static void enumEx1() {
+		// Week enum(열거체)를 참조해서 today라는 객체를 만들어서 enumEx1에서 사용
+		// 열거체 참조 방법 
 		Week today = Week.SUNDAY;
 		
 		System.out.printf("오늘은 %s(%d) 입니다.%n",
