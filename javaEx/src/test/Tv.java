@@ -10,14 +10,14 @@ public class Tv {
 		this.volume = volume;
 		this.power = power;
 	}
-	public int getchannel(int channel) {
+	public int getchannel() {
 		return channel;
 	}
-	public int getvolume(int volume) {
+	public int getvolume() {
 		return volume;
 	}
-	public boolean ispower(boolean power) {
-		return power;
+	public void power(boolean power) {
+		this.power=power;
 	}
 }
 

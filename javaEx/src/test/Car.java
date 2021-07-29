@@ -1,46 +1,45 @@
 package test;
 
 public class Car {
+	String company = "현대";
 	String model;
+	String color;
+	int maxSpeed;
 	int speed;
 	
-	Car(String model) {
+	void model(String model) {
 		this.model = model;
 	}
 	void setSpeed(int speed) {
 		this.speed = speed;
 	}
+	
 	void run() {
 		for (int i = 10; i <= 50; i += 10) {
 			this.setSpeed(i);
 			System.out.println(this.model + "가 달립니다.(시속:" +this.speed+"km/h)");
 		}
 	}
+	
+	Car() {}
+	
+	// Car 2에 들어감 String 하나
+	Car(String model) {
+		// 맨 밑의 Car를 호출함
+		this(model, "은색", 700);
+	} 
+	// Car 5에 들어감, String가 두개
+	Car(String model, String color) {
+		// 맨 밑의 Car를 호출함
+		this(model, "금색", 500);
+	}
+	
+	Car(String model, String color, int maxSpeed) {
+		this.model = model;
+		this.color = color;
+		this.maxSpeed = maxSpeed;
+	}
 }
-//	String company = "현대";
-//	String model;
-//	String color;
-//	int maxSpeed;
-//	
-//	
-//	Car() {}
-//	
-//	// Car 2에 들어감 String 하나
-//	Car(String model) {
-//		// 맨 밑의 Car를 호출함
-//		this(model, "은색", 700);
-//	} 
-//	// Car 5에 들어감, String가 두개
-//	Car(String model, String color) {
-//		// 맨 밑의 Car를 호출함
-//		this(model, "금색", 500);
-//	}
-//	
-//	Car(String model, String color, int maxSpeed) {
-//		this.model = model;
-//		this.color = color;
-//		this.maxSpeed = maxSpeed;
-//	}
 //	--------------------------------------------------------
 //	int gas;
 //	
