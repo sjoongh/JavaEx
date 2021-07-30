@@ -10,15 +10,34 @@ public class Tv {
 		this.volume = volume;
 		this.power = power;
 	}
-	public int getchannel() {
-		return channel;
-	}
+	
 	public int getvolume() {
+		System.out.println(volume);
 		return volume;
 	}
-	public void power(boolean power) {
-		this.power=power;
+	public boolean getpower() {
+		System.out.println(power);
+		return power;
 	}
+	public boolean power(boolean power) {
+		System.out.println(power);
+		return power;
+	}
+	public int channel(int channel) {
+		System.out.println(channel);
+		return channel;
+	}
+	public boolean channel(boolean channel) {
+		System.out.println(channel);
+		return channel;
+	}
+	public int volume(int volume) {
+		System.out.println(volume);
+		return volume;
+	}
+	
 }
+
+
 
 

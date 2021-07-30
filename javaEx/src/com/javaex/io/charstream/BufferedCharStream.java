@@ -10,6 +10,9 @@ import java.io.Reader;
 import java.io.Writer;
 
 public class BufferedCharStream {
+	// rootPath : 경로 가져오기
+	// Sysyem.getProperty : 현재 사용하고 있는 시스템 환경에 관한 정보
+	// user.dir : 현재 작업 디렉토리
 	static final String rootPath = System.getProperty("user.dir") + "\\files\\";
 	static String source = rootPath + "last-leaf.txt";
 	static String target = rootPath + "last-leaf-filtered.txt";
