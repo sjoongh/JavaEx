@@ -12,15 +12,15 @@ public class Circle extends Shape {
 	
 	// 추상 메서드 구현
 	@Override
-	public void draw() {
-		System.out.printf("원[x=%d, y=%d, r=%f area=%f]을 그렸습니다.%n",
-				x, y, radius, area());
-	}
-
-	@Override
 	public double area() {
 		double area = Math.PI * Math.pow(radius, 2);
 		return area;
+	}
+	
+	@Override
+	public void draw() {
+		System.out.printf("원[x=%d, y=%d, r=%f area=%f]을 그렸습니다.%n",
+				x, y, radius, area());
 	}
 
 }

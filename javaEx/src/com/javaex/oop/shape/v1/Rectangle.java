@@ -22,7 +22,7 @@ public class Rectangle extends Shape {
 	
 	@Override
 	public void draw() {
-		System.out.printf("사각형[x=%d, y=%d, h=%d, area=%f]을 그렸어요%n",
+		System.out.printf("사각형[x=%d, y=%d, w=%d, h=%f,area=%f]을 그렸어요%n",
 				x, y, width, height, area());
 	}
 }
