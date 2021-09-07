@@ -17,9 +17,13 @@ import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 
 public class MongodbTest {
+	// 기본 IP
 	static String MONGODB_IP = "127.0.0.1";
+	// 기본 port
 	static int MONGODB_PORT = 27017;
+	// DB_NAME 설정
 	static String DB_NAME = "javaMongo";
+	// collection 이름 설정
 	static String COLL_NAME = "testCollection";
 
 	public static void main(String[] args) {
@@ -37,6 +41,7 @@ public class MongodbTest {
 	
 	// 삭제
 	private static void testDeleteAll() {
+		// 해당 DB의 collection을 호출
 		MongoCollection<Document> collection =
 				getCollection(DB_NAME, COLL_NAME);
 		DeleteResult res = collection.deleteMany(new Document());
@@ -82,14 +87,22 @@ public class MongodbTest {
 //		Bson bsonFilter = Filters.regex("species", "인간");
 		// 복합 조건
 //		species = 인건이거나 gender = 여성인 레코드
+		// Filters.or은 or연산과 같은기능
+		// Filters.eq는 where조건처럼 조건문 사용하겠다는 의미
+		// mongoDB는 Bson으로 구성되어 있으므로
+		// Bson에 Filters조건을 걸어 해당 데이터를 가져옴
 		Bson bsonFilter = Filters.or(
 				Filters.eq("species", "인간"),
 				Filters.eq("gender", "여성"));
-		
+		// find로 bsonFilter의 조건에 맞는것을 찾아옴
+		// .iterator로 조건에 해당하는 모든 요소를 가져올 수 있음
+		// MongoCursor<document>는 조건에 맞는 전체 document를 가져옴
+		// 찾아온 데이터를 cursor이 리턴함
 		MongoCursor<Document> cursor =
 				collection.find(bsonFilter).iterator();
 		while (cursor.hasNext()) {
 			Document doc = cursor.next();
+			// Bson으로 된 데이터를 Json형식으로 user가 읽을 수 있게 바꿔서 출력해줌
 			System.out.println(doc.toJson());
 		}
 		cursor.close();
